@@ -1,0 +1,109 @@
+/* ====== Sunset Palette ======
+   Spanish Orange: #E66414
+   Atomic Tangerine: #FF924D
+   Non-Photo Blue:  #9AD3DA
+   Light Sea Green: #00A8A8
+   Midnight Green:  #03444A
+================================ */
+
+:root {
+    --sunset-orange: #E66414;
+    --atomic-tangerine: #FF924D;
+    --non-photo-blue: #9AD3DA;
+    --light-sea-green: #00A8A8;
+    --midnight-green: #03444A;
+  
+    --text-dark: #222;
+    --text-light: #fafafa;
+  }
+  
+  /* Image in Body */
+
+  body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 100vh;
+  
+    /* ---- Background settings ---- */
+    background: 
+      linear-gradient(
+        rgba(3, 68, 74, 0.65),      /* Midnight green overlay for readability */
+        rgba(0, 168, 168, 0.65)
+      ),
+      url("../img/BG.png") center/cover no-repeat fixed;
+    background-color: var(--midnight-green); /* Fallback color */
+  
+    color: var(--text-dark);
+  }
+  
+  /* Header / Nav */
+  header {
+    background: linear-gradient(
+      to right,
+      var(--sunset-orange),
+      var(--atomic-tangerine)
+    );
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    text-align: center;
+  }
+  
+  /* Navigation links */
+  nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+  }
+  nav a:hover {
+    color: var(--non-photo-blue);
+  }
+  
+  /* Main content */
+  main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: var(--light-sea-green);
+    color: var(--text-light);
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  
+  /* Blog posts */
+  article {
+    background: var(--midnight-green);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+  article h2 {
+    color: var(--atomic-tangerine);
+    margin-top: 0;
+  }
+  article p {
+    line-height: 1.6;
+  }
+  
+  /* Buttons */
+  .button-primary {
+    background: var(--sunset-orange);
+    color: var(--text-light);
+    padding: 0.7rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .button-primary:hover {
+    background: var(--atomic-tangerine);
+  }
+  
+  /* Footer */
+  footer {
+    background: var(--midnight-green);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+  
